@@ -19,3 +19,7 @@
    - Download and install VirtualBox and the Extension Pack
    - Verify hardware specs via system properties
    - Enable virtualization in BIOS if required
+2. ISO Acquisition:
+   - Access Microsoft Evaluation Center
+   - Download Windows Server 2016 ISO (not Virtual Labs or Azure image)
+3. Virtual Machine Setup:
