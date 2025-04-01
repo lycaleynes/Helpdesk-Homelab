@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing VirtualBox and Server 2016</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    ul, ol {
+      margin-bottom: 1em;
+    }
+    .section {
+      margin-bottom: 2em;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    img {
+      display: block;
+      margin: 15px auto;
+      max-width: 90%;
+      height: auto;
+      border-radius: 6px;
+    }
+    a {
+      color: #2980b9;
+    }
+    code {
+      background-color: #eaeaea;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Installing VirtualBox and Server 2016</h1>
 
+  <div class="section">
+    <h2>Description</h2>
+    <p>This project walks through the step-by-step setup of a Windows Server 2016 virtual machine. The lab provides exposure to core help desk and IT support concepts, such as system specs assessment, virtualization, ISO image handling, and preparing for Active Directory configuration.</p>
+  </div>
+
+  <div class="section">
+    <h2>Lab Environment</h2>
+    <ul>
+      <li>Platform: Oracle VirtualBox (compatible with VMware and other hypervisors)</li>
+      <li>Operating System: Windows Server 2016 (ISO from Microsoft Evaluation Center)</li>
+      <li>Host Requirements:
+        <ul>
+          <li>Minimum 2 GB RAM (recommended 4–8 GB)</li>
+          <li>At least 50 GB available disk space</li>
+          <li>Virtualization enabled in BIOS/UEFI</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Installation Preparation</h2>
+    <ol>
+      <li>Download and install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> and the Extension Pack.
+        <img src="https://i.imgur.com/8yTY2B1.png" alt="VirtualBox Download">
+      </li>
+      <li>Verify hardware specs via system properties. Go to <b>Settings</b> &gt; <b>System</b> &gt; <b>About</b>.
+        <img src="https://imgur.com/dhn0zhn.png" alt="System Specs">
+      </li>
+      <li>Enable <a href="https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-c5578302-6e43-4b4b-a449-8ced115f58e1">virtualization</a> in BIOS if required.
+        <img src="https://i.imgur.com/Wcf1hZ9.png" alt="Enable Virtualization">
+      </li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>ISO Acquisition</h2>
+    <ol>
+      <li>Go to <a href="https://www.microsoft.com/en-us/evalcenter">Microsoft Evaluation Center</a> and download Windows Server 2016.
+        <img src="https://i.imgur.com/2dpv3ck.png" alt="Microsoft Eval Center">
+      </li>
+      <li>Click on <a href="https://go.microsoft.com/fwlink/p/?linkid=2195684&clcid=0x409&culture=en-us&country=us">Download the ISO</a>.
+        <img src="https://i.imgur.com/GBcduMM.png" alt="Download ISO">
+      </li>
+      <li>Register and download. Evaluation lasts 180 days.
+        <img src="https://i.imgur.com/OK4vDcy.png" alt="Registration">
+        <img src="https://i.imgur.com/xpMYtk9.png" alt="ISO Download">
+      </li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Installing VirtualBox & Extension Pack</h2>
+    <ol>
+      <li>Launch Setup Wizard → Click Next
+        <img src="https://i.imgur.com/VdvC0rk.png" alt="Setup Wizard">
+      </li>
+      <li>Accept the License Agreement → Click Next
+        <img src="https://i.imgur.com/9AGJyKU.png" alt="License Agreement">
+      </li>
+      <li>Choose Installation Components → Click Next
+        <img src="https://i.imgur.com/WOvcDSw.png" alt="Installation Components">
+      </li>
+      <li>Network Interfaces Warning → Click Yes
+        <img src="https://i.imgur.com/psnICMV.png" alt="Network Warning">
+      </li>
+      <li>Python Bindings Warning → Click Yes or install dependencies later
+        <img src="https://i.imgur.com/s1LY1a5.png" alt="Python Warning">
+      </li>
+      <li>Select Additional Tasks → Click Next
+        <img src="https://i.imgur.com/QzONKuc.png" alt="Additional Tasks">
+      </li>
+      <li>Ready to Install → Click Install
+        <img src="https://i.imgur.com/hzG3KtM.png" alt="Ready to Install">
+      </li>
+      <li>Installation Progress → Wait for completion
+        <img src="https://i.imgur.com/l6czBh3.png" alt="Installing">
+      </li>
+      <li>Install Extension Pack → Click Install
+        <img src="https://i.imgur.com/whq3u1U.png" alt="Install Extension Pack">
+      </li>
+      <li>Accept License Agreement for Extension Pack → Click I Agree
+        <img src="https://i.imgur.com/ADqXQbG.png" alt="Extension Pack License">
+      </li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Virtual Machine Setup</h2>
+    <ol>
+      <li>Name and OS:
+        <ul>
+          <li>Name: <code>Server-2016-Lab</code></li>
+          <li>Select ISO file</li>
+          <li>Check <code>Skip Unattended Install</code> → Click Next</li>
+        </ul>
+        <img src="https://i.imgur.com/XgAlHWi.png" alt="VM Name">
+      </li>
+      <li>Configure Hardware:
+        <ul>
+          <li>Base Memory: 8192 MB</li>
+          <li>Processors: 1</li>
+        </ul>
+        <img src="https://i.imgur.com/Jp6O3pN.png" alt="Hardware Settings">
+      </li>
+      <li>Virtual Hard Disk:
+        <ul>
+          <li>Disk Size: 50 GB</li>
+        </ul>
+        <img src="https://i.imgur.com/Mr3gkL6.png" alt="Disk Size">
+      </li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Windows Server Installation</h2>
+    <ol>
+      <li>Choose Language → Click Next
+        <img src="https://i.imgur.com/YPTRkyN.png" alt="Language Selection">
+      </li>
+      <li>Click Install now
+        <img src="https://i.imgur.com/Ma8ecEL.png" alt="Install Now">
+      </li>
+      <li>Select version: Standard Evaluation (Desktop Experience) → Click Next
+        <img src="https://i.imgur.com/4JIbx5q.png" alt="Version Selection">
+      </li>
+      <li>Accept License Terms → Click Next
+        <img src="https://i.imgur.com/e90X7pq.png" alt="License Terms">
+      </li>
+      <li>Select Custom: Install Windows only (advanced)
+        <img src="https://i.imgur.com/dUgxJMQ.png" alt="Custom Install">
+      </li>
+      <li>Choose virtual hard disk → Click Next
+        <img src="https://i.imgur.com/fagMXuZ.png" alt="Select Disk">
+      </li>
+      <li>Wait for installation to finish
+        <img src="https://i.imgur.com/QsdLlzR.png" alt="Installing">
+      </li>
+      <li>Set Administrator password → Click Finish
+        <img src="https://i.imgur.com/Y9cyiI1.png" alt="Admin Password">
+      </li>
+      <li>Login screen → Use VirtualBox menu: Input > Keyboard > Insert Ctrl+Alt+Del
+        <img src="https://i.imgur.com/egR9OuE.png" alt="Login Screen">
+      </li>
+      <li>Server Manager opens → Begin configuration
+        <img src="https://i.imgur.com/uD5jh0v.png" alt="Server Manager">
+      </li>
+    </ol>
+  </div>
+</body>
+</html>
