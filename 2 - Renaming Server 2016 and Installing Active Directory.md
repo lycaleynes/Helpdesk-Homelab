@@ -4,7 +4,7 @@
 
 This project is part two of a multi-part series designed for aspiring IT professionals preparing for entry-level roles in help desk or IT support. The focus of this phase is installing and configuring Active Directory Domain Services (AD DS) on a Windows Server 2016 virtual machine using VirtualBox.
 
-This part of the lab simulates setting up a domain controller, renaming the server, and launching Active Directory tools—key tasks for any junior system administrator or support tech.
+Building a personal lab enables hands-on learning, which is essential for job readiness. This part of the lab simulates setting up a domain controller, renaming the server, and launching Active Directory tools—key tasks for any junior system administrator or support tech.
 
 ## Lab Environment
 
