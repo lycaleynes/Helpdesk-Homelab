@@ -2,7 +2,9 @@
 
 ## Description
 
-<p>This project walks through the step-by-step setup of a Windows Server 2016 virtual machine. The lab provides exposure to core help desk and IT support concepts, such as system specs assessment, virtualization, ISO image handling, and preparing for Active Directory configuration.</p>
+To help new IT professionals build foundational skills and confidence, I created a virtual lab using Oracle VirtualBox. This hands-on environment simulates real-world IT scenarios, enabling practice with server installation, configuration, and management. The goal of this lab is to empower beginners with practical experience they can showcase in job interviews and apply on the job.
+
+This project walks through the step-by-step setup of a Windows Server 2016 virtual machine. The lab provides exposure to core help desk and IT support concepts, such as system specs assessment, virtualization, ISO image handling, and preparing for Active Directory configuration. This environment is ideal for entry-level techs preparing for roles in IT support or system administration.
 
 ## Lab Environment
 
