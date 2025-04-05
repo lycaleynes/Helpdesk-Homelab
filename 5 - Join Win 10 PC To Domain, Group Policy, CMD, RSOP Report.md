@@ -12,9 +12,7 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
 - Windows 10 ISO
 - Previously created help desk account and RSAT tools
 
-## Steps
-
-### Set Up the Second Windows 10 VM
+## Set Up the Second Windows 10 VM
 
 - Open VirtualBox  
 - Create new VM named `Desktop-2` > Check **Skip Unattended Installation**
@@ -23,8 +21,23 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
   <p align="center"><img src="https://i.imgur.com/JFSwmgf.png" height="80%" width="80%" alt="Homelab"/></p>
 - Choose **Create a Virtual Hard Disk Now** > Finish
   <p align="center"><img src="https://i.imgur.com/tl1YIkG.png" height="80%" width="80%" alt="Homelab"/></p>
-- Choose **Windows 10 Pro**, not Home (so it can join a domain)  
-- Create a local account (e.g., `Administrator`) and skip setting up online account  
+- Start the VM and boot from the ISO
+- Click **Next**
+  <p align="center"><img src="https://i.imgur.com/pxpE6cA.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Install now**
+  <p align="center"><img src="https://i.imgur.com/scn0lnr.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **I don't have a product key**
+  <p align="center"><img src="https://i.imgur.com/wkYDDLp.png" height="80%" width="80%" alt="Homelab"/></p>
+- Install **Windows 10 Pro** (not Home)
+  <p align="center"><img src="https://i.imgur.com/IORcls5.png" height="80%" width="80%" alt="Homelab"/></p>
+- Accept the license terms > **Next**
+  <p align="center"><img src="https://i.imgur.com/EGIDrKW.png" height="80%" width="80%" alt="Homelab"/></p>
+- Choose **Custom: Install Windows only (advanced)**
+  <p align="center"><img src="https://i.imgur.com/JuyqAQi.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Next**
+  <p align="center"><img src="https://i.imgur.com/Bl7LFuP.png" height="80%" width="80%" alt="Homelab"/></p>
+- Wait for installation to finish
+  <p align="center"><img src="https://i.imgur.com/4f5gFmv.png" height="80%" width="80%" alt="Homelab"/></p>
 
 ### Configure the Local Administrator
 
