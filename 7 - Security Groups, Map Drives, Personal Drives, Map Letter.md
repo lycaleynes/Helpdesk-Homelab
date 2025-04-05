@@ -15,6 +15,7 @@ In this lab, we set up shared drive permissions using security groups and demons
 ## Create Shared Folders
 
 - On Server 2016, open **Server Manager** > **File and Storage Services** > **Shares**
+  
 - Right-click **Shares** > **New Share** > Choose **Quick**
 - Create the following folders:
   - `HR`
