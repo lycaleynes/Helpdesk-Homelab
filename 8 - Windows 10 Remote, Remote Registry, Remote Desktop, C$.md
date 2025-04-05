@@ -15,8 +15,6 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
 - Use C$ administrative share for file access
 - Practice Windows Remote Assistance
 
----
-
 ## Enable Remote Desktop on Desktop2 (Jason’s Machine)
 
 - Log in to `Desktop2` as `Jason`
@@ -32,7 +30,7 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
 - On `Desktop1`, open **Remote Desktop Connection**
 - Connect to: `Desktop2`
 - Authenticate as `HelpDesk`
-- Observe the ability to browse `Patty`'s user folders: Desktop, Downloads, AppData
+- Observe the ability to browse `Jason`'s user folders: Desktop, Downloads, AppData
 
 ### Why this is Useful:
 - Allows troubleshooting without needing user to be present
@@ -44,7 +42,7 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
 ## File Transfer via C$ Administrative Share
 
 - On `Desktop1`, open File Explorer > type `\\Desktop2\C$`
-- Navigate to: `Users\Patty\Desktop`
+- Navigate to: `Users\jwilliams\Desktop`
 - Drag-and-drop files to and from this location
 
 ### Notes:
@@ -57,7 +55,7 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
 
 ### Method 1: CMD (Net Use)
 
-- On `Patty`’s machine, open **CMD**
+- On `Jason`’s machine, open **CMD**
 - Run: `net use`
 - Displays mapped drives like `Z:` (HR share) and `P:` (Personal drive)
 
@@ -67,7 +65,7 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
 - File > Connect Network Registry > `Desktop2`
 - Navigate to:
   - `HKEY_USERS`
-  - Find SID for Patty
+  - Find SID for Jason
   - Go to `Network` key to view drive letters and mapped shares
 
 ---
@@ -81,7 +79,7 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
 
 ## Use Windows Remote Assistance (GUI Tool)
 
-### On User Machine (Patty):
+### On User Machine (Jason):
 - Open Start > **Windows Remote Assistance**
 - Select: **Invite someone you trust to help**
 - Save invitation file to Desktop
@@ -103,7 +101,7 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
 ## Recap
 
 - Enabled and tested Remote Desktop login with `HelpDesk`
-- Navigated and edited files in Patty’s profile
+- Navigated and edited files in Jason’s profile
 - Used `net use`, regedit, and C$ shares for troubleshooting
 - Practiced secure, GUI-based remote assistance
 
