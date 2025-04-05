@@ -173,8 +173,21 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
 
 - Go to **File Explorer** > Right-click **This PC** > **Manage**
   <p align="center"><img src="https://i.imgur.com/ZHrxYZh.png" height="80%" width="80%" alt="Homelab"/></p>
-- Set the password to something consistent (e.g., `Welcome1`)  
-- Delete any extra user accounts created during install  
+- Go to **Local Users and Groups** > **Users**
+  <p align="center"><img src="https://i.imgur.com/R30nFZK.png" height="80%" width="80%" alt="Homelab"/></p>
+- Right click on **Administrator** > **Properties**
+  <p align="center"><img src="https://i.imgur.com/LMys9bD.png" height="80%" width="80%" alt="Homelab"/></p>
+- Uncheck **Account is disabled** > **Apply** > **OK**
+  <p align="center"><img src="https://i.imgur.com/E0Ye9jA.png" height="80%" width="80%" alt="Homelab"/></p>
+- Right click on **Administrator** > **Set Password** > **Proceed**
+  <p align="center"><img src="https://i.imgur.com/TuZjSu3.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/q8Mhwnp.png" height="80%" width="80%" alt="Homelab"/></p>
+- Set a password for your Administrator account > **OK**
+  <p align="center"><img src="https://i.imgur.com/dSDW0rY.png" height="80%" width="80%" alt="Homelab"/></p>
+- Sign out from the User account
+  <p align="center"><img src="https://i.imgur.com/ynMFVvO.png" height="80%" width="80%" alt="Homelab"/></p>
+- Sign in to your Administrator account
+  <p align="center"><img src="https://i.imgur.com/TeT857c.png" height="80%" width="80%" alt="Homelab"/></p>
 
 ### Assign a Static IP Address
 
