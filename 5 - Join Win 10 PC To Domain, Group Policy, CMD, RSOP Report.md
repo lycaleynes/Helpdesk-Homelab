@@ -8,7 +8,7 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
 
 - VirtualBox
 - Windows Server 2016 (already set up)
-- Existing domain: `kevtech.com`
+- Existing domain: `lycatech.com`
 - Windows 10 ISO
 - Previously created help desk account and RSAT tools
 
@@ -17,9 +17,12 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
 ### Set Up the Second Windows 10 VM
 
 - Open VirtualBox  
-- Create new VM named `Desktop-2`
-- Select Windows 10 and assign 8 GB RAM  
-- Mount Windows 10 ISO and begin installation  
+- Create new VM named `Desktop-2` > Check **SKip Unattended Installation**
+  <p align="center"><img src="https://i.imgur.com/JFSwmgf.png" height="80%" width="80%" alt="Homelab"/></p>
+- Select Windows 10 and assign 8 GB RAM
+  <p align="center"><img src="https://i.imgur.com/JFSwmgf.png" height="80%" width="80%" alt="Homelab"/></p>
+- Choose **Create a Virtual Hard Disk Now** > Finish
+  <p align="center"><img src="https://i.imgur.com/tl1YIkG.png" height="80%" width="80%" alt="Homelab"/></p>
 - Choose **Windows 10 Pro**, not Home (so it can join a domain)  
 - Create a local account (e.g., `Administrator`) and skip setting up online account  
 
@@ -98,40 +101,3 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
 - Open CMD and run `net user Paddy /domain` to check policy enforcement  
 - Open **Active Directory Users and Computers** > double-click `Paddy` > Attribute Editor  
   - Confirm last login value has updated  
-
----
-
-## Skills Practiced
-
-- VM setup and configuration  
-- Domain joining  
-- Organizational Unit creation  
-- User account provisioning  
-- Group policy application and testing  
-- Using RSAT tools and CMD for administration  
-
----
-
-## Recap
-
-- Set up a second Windows 10 client and joined it to domain  
-- Created and organized users into different OUs  
-- Applied password and lockout policies via Group Policy  
-- Verified settings using both GUI (Attribute Editor) and CMD (`net user /domain`)  
-
----
-
-## What’s Next
-
-- Begin applying and testing Group Policy Objects on OUs  
-- Install remote support tools like TeamViewer  
-- Configure shared folders and drive mappings  
-- Start troubleshooting simulations using lab setup  
-
----
-
-**Reminder**: Use these steps as practice for real-world desktop support and help desk interview scenarios.
-
----
-
-*Stay tuned for the next lab walkthrough!*
