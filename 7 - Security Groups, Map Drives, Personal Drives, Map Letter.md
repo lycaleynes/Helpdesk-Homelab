@@ -119,5 +119,5 @@ In this lab, we set up shared drive permissions using security groups and demons
   <p align="center"><img src="https://i.imgur.com/5UQDiy5.png" height="80%" width="80%" alt="Homelab"/></p>
 - A folder `\\Server2016\Personal\jwilliams` is automatically created
   <p align="center"><img src="https://i.imgur.com/zy0gmRR.png" height="80%" width="80%" alt="Homelab"/></p>
-- Upon next login, the `P:` drive is mapped for Patty
+- Upon next login, the `P:` drive is mapped for Jason
   <p align="center"><img src="https://i.imgur.com/o0MQ3Of.png" height="80%" width="80%" alt="Homelab"/></p>
