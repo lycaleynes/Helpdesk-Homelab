@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this lab, we set up shared drive permissions using security groups and demonstrate two ways to map network drives. We use the user account `Patty` for testing. This is a crucial real-world skill for IT support roles and often asked about in interviews.
+In this lab, we set up shared drive permissions using security groups and demonstrate two ways to map network drives. We use the user account `Jason` for testing. This is a crucial real-world skill for IT support roles and often asked about in interviews.
 
 ## Objectives
 
