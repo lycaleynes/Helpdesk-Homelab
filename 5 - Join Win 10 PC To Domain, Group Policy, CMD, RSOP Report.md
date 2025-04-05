@@ -38,10 +38,141 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
   <p align="center"><img src="https://i.imgur.com/Bl7LFuP.png" height="80%" width="80%" alt="Homelab"/></p>
 - Wait for installation to finish
   <p align="center"><img src="https://i.imgur.com/4f5gFmv.png" height="80%" width="80%" alt="Homelab"/></p>
+- Choose a region
+  <p align="center"><img src="https://i.imgur.com/rZo41jB.png" height="80%" width="80%" alt="Homelab"/></p>
+- Choose your keyboard layout
+  <p align="center"><img src="https://i.imgur.com/oLBM6uZ.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Skip**
+  <p align="center"><img src="https://i.imgur.com/Dneaj8o.png" height="80%" width="80%" alt="Homelab"/></p>
+- Choose **Set up for personal use** > **Next**
+  <p align="center"><img src="https://i.imgur.com/JDj1tUp.png" height="80%" width="80%" alt="Homelab"/></p>
+- Choose **Offline account**
+  <p align="center"><img src="https://i.imgur.com/wYPEU6f.png" height="80%" width="80%" alt="Homelab"/></p>
+- Choose **Limited experience**
+  <p align="center"><img src="https://i.imgur.com/r5mkLiT.png" height="80%" width="80%" alt="Homelab"/></p>
+- Name the user for the PC
+  <p align="center"><img src="https://i.imgur.com/mLeqHf4.png" height="80%" width="80%" alt="Homelab"/></p>
+- Create a password for the user
+  <p align="center"><img src="https://i.imgur.com/EOBdN74.png" height="80%" width="80%" alt="Homelab"/></p>
+- Confirm the password
+  <p align="center"><img src="https://i.imgur.com/mqxG3gR.png" height="80%" width="80%" alt="Homelab"/></p>
+- Create security questions for your account
+  <p align="center"><img src="https://i.imgur.com/w49fg7A.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Accept**
+  <p align="center"><img src="https://i.imgur.com/s2BVKoE.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/jGzCdra.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Skip**
+  <p align="center"><img src="https://i.imgur.com/iXrNcq2.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Accept**
+  <p align="center"><img src="https://i.imgur.com/5KIDVSI.png" height="80%" width="80%" alt="Homelab"/></p>
+- Wait for setup to finish
+  <p align="center"><img src="https://i.imgur.com/bDYFP1h.png" height="80%" width="80%" alt="Homelab"/></p>
 
-### Configure the Local Administrator
+## Create a New User and Organizational Unit in Server 2016
 
-- After install, enable the local `Administrator` account  
+- Open **Active Directory Users and Computers**  
+- Right-click domain root > New > Organizational Unit > name it `HR`
+  <p align="center"><img src="https://i.imgur.com/kmT5jal.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/yU3Ofpn.png" height="80%" width="80%" alt="Homelab"/></p>
+- Create a new user (e.g., `Jason Williams`) and place in `HR` OU
+  <p align="center"><img src="https://i.imgur.com/40ZhUzd.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/HIuPgLz.png" height="80%" width="80%" alt="Homelab"/></p>
+- Set password to whatever you want
+  <p align="center"><img src="https://i.imgur.com/2EI0H8x.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/ZOzrg0o.png" height="80%" width="80%" alt="Homelab"/></p>
+- Right-click domain root > New > Organizational Unit > name it `IT`
+  <p align="center"><img src="https://i.imgur.com/RJIFf5k.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/SPvQmiQ.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/68QNzdD.png" height="80%" width="80%" alt="Homelab"/></p>
+- Move `helpdesk` and place in `IT` OU
+  <p align="center"><img src="https://i.imgur.com/68QNzdD.png" height="80%" width="80%" alt="Homelab"/></p>
+
+## Use CMD to Check Account Info on Windows 10 Lab
+
+- Open CMD as admin  
+- Run: `net user jwillaims /domain`
+  <p align="center"><img src="https://i.imgur.com/e238LoN.png" height="80%" width="80%" alt="Homelab"/></p>
+- Verify password expiration, last set date, and group membership
+
+## Enable Advanced Features and View Attribute Editor on Windows 10 Lab
+
+- In **Active Directory Users and Computers** > Advanced Features**
+  <p align="center"><img src="https://i.imgur.com/9jAkG82.png" height="80%" width="80%" alt="Homelab"/></p> 
+- Right-click domain root > **Find**
+  <p align="center"><img src="https://i.imgur.com/bDmXk6s.png" height="80%" width="80%" alt="Homelab"/></p> 
+- Search for `jason` > **Find Now**
+  <p align="center"><img src="https://i.imgur.com/sJZqlt6.png" height="80%" width="80%" alt="Homelab"/></p> 
+- Double-click on `Jason Williams` > **Object**
+  <p align="center"><img src="https://i.imgur.com/BU28QIj.png" height="80%" width="80%" alt="Homelab"/></p> 
+- Double-click on `Jason Williams` > **Object**
+  <p align="center"><img src="https://i.imgur.com/BU28QIj.png" height="80%" width="80%" alt="Homelab"/></p> 
+  <p align="center"><img src="https://i.imgur.com/dGQ5789.png" height="80%" width="80%" alt="Homelab"/></p>
+- Go to `HR` OU > double-click `Jason Williams`
+  <p align="center"><img src="https://i.imgur.com/RdPaN60.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Attribute Editor** tab
+  <p align="center"><img src="https://i.imgur.com/V79PvEX.png" height="80%" width="80%" alt="Homelab"/></p>
+- Scroll down to view:  
+  - `lastLogon`  
+  - `pwdLastSet`  
+  - `accountExpires`
+ 
+## Generating RSOP Report using Windows 10 Lab
+
+- In **Active Directory Users and Computers**, go to `IT` OU > Right-click `helpdesk` > **All tasks** > **Resultant Set of Policy (Logging)**
+  <p align="center"><img src="https://i.imgur.com/p6MAOMl.png" height="80%" width="80%" alt="Homelab"/></p>
+- Choose **This computer** > **Next**
+  <p align="center"><img src="https://i.imgur.com/xTBdX5R.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Next**
+  <p align="center"><img src="https://i.imgur.com/9m0VDt1.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/dYmdnSh.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Finish**
+  <p align="center"><img src="https://i.imgur.com/7PO2UoH.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/FWmoWW4.png" height="80%" width="80%" alt="Homelab"/></p>
+
+## Configure Group Policy Settings
+
+- In **Server Manager**, open **Group Policy Management**
+  <p align="center"><img src="https://i.imgur.com/yVaVRvP.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/5eVMTbO.png" height="80%" width="80%" alt="Homelab"/></p>
+- Right-click **Default Domain** > **Edit**
+  <p align="center"><img src="https://i.imgur.com/9KVslaa.png" height="80%" width="80%" alt="Homelab"/></p>
+- Navigate to **Computer Configuration > Windows Settings > Security Settings > Account Policies**
+  <p align="center"><img src="https://i.imgur.com/VQjSNkH.png" height="80%" width="80%" alt="Homelab"/></p>
+  
+  - Double-click **Account Lockout Policy**
+    <p align="center"><img src="https://i.imgur.com/6Vln5vh.png" height="80%" width="80%" alt="Homelab"/></p>
+  - Double-click **Account lockout duration**
+    <p align="center"><img src="https://i.imgur.com/1JknSBr.png" height="80%" width="80%" alt="Homelab"/></p>
+  - Check **Define this policy setting** > Set **Account lockout duration** to `30 minutes` > **OK**
+    <p align="center"><img src="https://i.imgur.com/1nGUvUG.png" height="80%" width="80%" alt="Homelab"/></p>
+    <p align="center"><img src="https://i.imgur.com/GJ3bNa7.png" height="80%" width="80%" alt="Homelab"/></p>
+    
+  - Check **Define this policy setting** > Set **Account lockout threshold** to `4 attempts` > **OK**
+    <p align="center"><img src="https://i.imgur.com/FMxfy1U.png" height="80%" width="80%" alt="Homelab"/></p>
+  - Go to **Password Policy** > Check **Define this policy setting** > Set **Maximum password age** to `90 days` > **OK**
+    <p align="center"><img src="https://i.imgur.com/rxlLw5l.png" height="80%" width="80%" alt="Homelab"/></p>
+- Verify that policy was placed
+  <p align="center"><img src="https://i.imgur.com/GlEPazR.png" height="80%" width="80%" alt="Homelab"/></p>
+
+## Rename the Computer on Desktop 2
+
+- Go to **File Explorer** > Right-click **This PC** > **Properties**
+  <p align="center"><img src="https://i.imgur.com/cKrSQOY.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Rename this PC (advanced)**
+  <p align="center"><img src="https://i.imgur.com/H3Dmzsv.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Change**
+  <p align="center"><img src="https://i.imgur.com/gZn7ptJ.png" height="80%" width="80%" alt="Homelab"/></p>
+- Change name to `Desktop2` > **OK**
+  <p align="center"><img src="https://i.imgur.com/TU0cP7Q.png" height="80%" width="80%" alt="Homelab"/></p>
+- Restart the machine
+  <p align="center"><img src="https://i.imgur.com/qplCEpu.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/eF9hsc4.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/agh3iQY.png" height="80%" width="80%" alt="Homelab"/></p>
+
+### Enable the Local Administrator on Desktop 2
+
+- Go to **File Explorer** > Right-click **This PC** > **Manage**
+  <p align="center"><img src="https://i.imgur.com/ZHrxYZh.png" height="80%" width="80%" alt="Homelab"/></p>
 - Set the password to something consistent (e.g., `Welcome1`)  
 - Delete any extra user accounts created during install  
 
@@ -56,51 +187,10 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
 - Change **Network Adapter** in VirtualBox to **Host-Only Adapter**  
 - Test connectivity by pinging `kevtech.com`  
 
-### Rename the Computer and Join Domain
-
-- Rename the computer to `DESKTOP2`  
-- Restart the machine  
-- Go to system properties > change settings > domain: `kevtech.com`  
-- Authenticate with the domain credentials (e.g., help desk account)  
-- Restart again  
-
-### Create a New User and Organizational Unit
-
-- Open **Active Directory Users and Computers**  
-- Right-click domain root > New > Organizational Unit > name it `HR`  
-- Create a new user (e.g., `Paddy`) and place in `HR` OU  
-- Set password to `Welcome1`  
-
 ### Move Existing Help Desk Account to IT OU
 
 - Create another OU called `IT`  
 - Move `HelpDesk` user into `IT` OU  
-
-### Enable Advanced Features and View Attribute Editor
-
-- In **Active Directory Users and Computers**, go to **View > Advanced Features**  
-- Go to `HR` OU > double-click `Paddy`  
-- Click **Attribute Editor** tab  
-- Scroll down to view:  
-  - `lastLogon`  
-  - `pwdLastSet`  
-  - `accountExpires`  
-
-### Use CMD to Check Account Info
-
-- On any domain-joined machine with RSAT:  
-  - Open CMD as admin  
-  - Run: `net user Paddy /domain`  
-  - Verify password expiration, last set date, and group membership  
-
-### Configure Group Policy Settings
-
-- Open **Group Policy Management**  
-- Right-click domain > Edit default domain policy  
-- Navigate to **Computer Configuration > Windows Settings > Security Settings > Account Policies**  
-  - Set **Maximum password age** to `90 days`  
-  - Set **Account lockout threshold** to `5 attempts`  
-  - Apply changes  
 
 ### Force and Verify Group Policy
 
