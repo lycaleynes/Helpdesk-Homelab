@@ -101,7 +101,7 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
 - Choose **Save this invitation as a file**
   <p align="center"><img src="https://i.imgur.com/KMwpUyu.png" height="80%" width="80%" alt="Homelab"/></p>
 - Save on your **Desktop**
-  <p align="center"><img src="https://i.imgur.com/E80dbrK.png" height="80%" 
+  <p align="center"><img src="https://i.imgur.com/E80dbrK.png" height="80%" width="80%" alt="Homelab"/></p>
 - Go back to `Desktop1` > Choose **Use an invitation file**
   <p align="center"><img src="https://i.imgur.com/C9zOZ8D.png" height="80%" width="80%" alt="Homelab"/></p>
 - Navigate to `\\Desktop2\C$`
