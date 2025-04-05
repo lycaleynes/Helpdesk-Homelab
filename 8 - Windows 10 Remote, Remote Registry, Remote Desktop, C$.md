@@ -26,7 +26,7 @@ In this lab, we expand our IT support capabilities by exploring multiple methods
   <p align="center"><img src="https://i.imgur.com/eYwrse2.png" height="80%" width="80%" alt="Homelab"/></p>
   <p align="center"><img src="https://i.imgur.com/97cd4RP.png" height="80%" width="80%" alt="Homelab"/></p>
 
-## Remote Desktop to Desktop2 as HelpDesk
+## Remote Desktop to Desktop2
 
 - On `Server 2016`, open **Remote Desktop Connection**
   <p align="center"><img src="https://i.imgur.com/tkxMEMB.png" height="80%" width="80%" alt="Homelab"/></p>
