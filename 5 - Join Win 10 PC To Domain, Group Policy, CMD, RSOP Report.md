@@ -17,7 +17,7 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
 ### Set Up the Second Windows 10 VM
 
 - Open VirtualBox  
-- Create new VM named `Desktop-2` > Check **SKip Unattended Installation**
+- Create new VM named `Desktop-2` > Check **Skip Unattended Installation**
   <p align="center"><img src="https://i.imgur.com/JFSwmgf.png" height="80%" width="80%" alt="Homelab"/></p>
 - Select Windows 10 and assign 8 GB RAM
   <p align="center"><img src="https://i.imgur.com/JFSwmgf.png" height="80%" width="80%" alt="Homelab"/></p>
