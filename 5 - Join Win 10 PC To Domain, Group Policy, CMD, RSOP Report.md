@@ -189,31 +189,58 @@ In this lab, we're adding a second Windows 10 virtual machine to our domain lab 
 - Sign in to your Administrator account
   <p align="center"><img src="https://i.imgur.com/TeT857c.png" height="80%" width="80%" alt="Homelab"/></p>
 
-### Assign a Static IP Address
+## Delete User Profile
 
-- Open **Control Panel > Network and Sharing Center > Change adapter settings**  
+- Right-click **This PC** > **Properties** > **Advanced system settings**
+  <p align="center"><img src="https://i.imgur.com/XfnGjHx.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/tO4eART.png" height="80%" width="80%" alt="Homelab"/></p>
+- Under **User Profiles** > **Settings**
+  <p align="center"><img src="https://i.imgur.com/VQjQPcz.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click on `DESKTOP\User` > **Delete** > **Yes** > **OK**
+  <p align="center"><img src="https://i.imgur.com/pwUefLd.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/RJ5ICH5.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/2py7ArG.png" height="80%" width="80%" alt="Homelab"/></p>
+
+## Assign a Static IP Address
+
+- Open **Control Panel > Network and Sharing Center > View network status and tasks > Change adapter settings**
+  <p align="center"><img src="https://i.imgur.com/ckorJje.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/yOR8dbU.png" height="80%" width="80%" alt="Homelab"/></p>
 - Set static IP:  
   - IP: `10.1.10.4`  
   - Subnet: `255.255.255.0`  
   - Gateway: `10.1.10.1`  
-  - DNS: `10.1.10.2`  
-- Change **Network Adapter** in VirtualBox to **Host-Only Adapter**  
-- Test connectivity by pinging `kevtech.com`  
+  - DNS: `10.1.10.2`
+  - Alt DNS: `10.1.10.1`
+    <p align="center"><img src="https://i.imgur.com/4umxruM.png" height="80%" width="80%" alt="Homelab"/></p>
+- Change **Network Adapter** in VirtualBox to **Host-Only Adapter**
+  <p align="center"><img src="https://i.imgur.com/IoalwLP.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/CpcYpqk.png" height="80%" width="80%" alt="Homelab"/></p>
+- Test connectivity by pinging `lycatech.com`
+  <p align="center"><img src="https://i.imgur.com/DCMMfkR.png" height="80%" width="80%" alt="Homelab"/></p>
 
-### Move Existing Help Desk Account to IT OU
+## Join Desktop 2 to Domain
 
-- Create another OU called `IT`  
-- Move `HelpDesk` user into `IT` OU  
+- Right-click **This PC** > **Properties > Rename this PC (advanced)**
+  <p align="center"><img src="https://i.imgur.com/XfnGjHx.png" height="80%" width="80%" alt="Homelab"/></p>
+- Click **Change**
+  <p align="center"><img src="https://i.imgur.com/Ap1ST4T.png" height="80%" width="80%" alt="Homelab"/></p>
+- Enter `lycatech.com` and authenticate with domain admin credentials
+  <p align="center"><img src="https://i.imgur.com/gHBto4T.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/JwlS62r.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/47vdl9M.png" height="80%" width="80%" alt="Homelab"/></p>
+- Restart your VM
+  <p align="center"><img src="https://i.imgur.com/zbZcaGV.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/dvSlDrM.png" height="80%" width="80%" alt="Homelab"/></p>
+  <p align="center"><img src="https://i.imgur.com/6ESb9Bq.png" height="80%" width="80%" alt="Homelab"/></p>
+- Verify that the system is in the domain by checking on Server 2016
+  <p align="center"><img src="https://i.imgur.com/ksp8aPH.png" height="80%" width="80%" alt="Homelab"/></p>
 
-### Force and Verify Group Policy
+## Log In as Jason Williams on Desktop2
 
-- Right-click domain > **Group Policy Update** (forces policy refresh)  
-- Open **Group Policy Management** > Settings tab  
-- Confirm updated policy values appear under **Password Policy** and **Account Lockout Policy**  
-
-### Log In as User on Desktop2
-
-- On Desktop2, login as user `Paddy` using password `Welcome1`  
-- Open CMD and run `net user Paddy /domain` to check policy enforcement  
-- Open **Active Directory Users and Computers** > double-click `Paddy` > Attribute Editor  
-  - Confirm last login value has updated  
+- On Desktop2, login as user `jwilliams`
+  <p align="center"><img src="https://i.imgur.com/dGToUgy.png" height="80%" width="80%" alt="Homelab"/></p>
+- Open **Active Directory Users and Computers** on Windows 10 Lab > **HR** > Double-click `Jason Williams` > **Attribute Editor**
+  <p align="center"><img src="https://i.imgur.com/Q4vG4HE.png" height="80%" width="80%" alt="Homelab"/></p>
+- Confirm last login value has updated
+  <p align="center"><img src="https://i.imgur.com/0x3z9ur.png" height="80%" width="80%" alt="Homelab"/></p>
