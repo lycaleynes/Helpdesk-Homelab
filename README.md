@@ -1,4 +1,4 @@
-# Windows Server 2016 & Active Directory Lab Guide
+# Helpdesk Homelab
 
 This repository provides a step-by-step lab guide for setting up and managing a Windows Server 2016 environment using VirtualBox. It is designed for IT students, system administrators, and anyone preparing for Windows Server and Active Directory certifications or job roles.
 
