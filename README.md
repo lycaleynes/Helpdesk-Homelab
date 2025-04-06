@@ -2,8 +2,6 @@
 
 This repository provides a step-by-step lab guide for setting up and managing a Windows Server 2016 environment using VirtualBox. It is designed for IT students, system administrators, and anyone preparing for Windows Server and Active Directory certifications or job roles.
 
-Each guide is provided in Markdown format and focuses on practical tasks from installation to real-world administrative tools and troubleshooting.
-
 ## Table of Contents
 
 1. **[Installing VirtualBox and Server 2016](01%20-%20Installing%20Virtualbox%20and%20Server%202016.md)** - Learn how to install VirtualBox and set up a Windows Server 2016 virtual machine.
